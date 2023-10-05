@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+
+  tg:
+    image: tgbot
+    container_name: tg
+    restart: always
+    volumes:
+      - ./home:/home/log
+    deploy:
+      mode: replicated
+      replicas: 1
